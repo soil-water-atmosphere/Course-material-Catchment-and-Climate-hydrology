@@ -1,0 +1,43 @@
+format: jb-book
+root: intro
+options:
+  numbered: 4
+chapters:    # (need to edit these according to plan)
+- file: iceland excursion/iceland excursion_intro.ipynb
+
+
+- file: lowlands/lowlands_intro.ipynb
+  sections:
+  - file: lowlands/lowlands_slides.ipynb
+  - file: lowlands/lowlands_practical.ipynb
+  
+
+- file: recession/recession_intro.ipynb
+  sections:
+  - file: recession/recession_slides.ipynb
+  - file: recession/recession_practical.ipynb
+ 
+
+- file: snow ice/snow ice_intro.ipynb
+  sections:
+  - file: snow ice/snow ice_slides.ipynb
+  - file: snow ice/snow ice_practical.ipynb
+ 
+
+- file: soil moisture/soil moisture_intro.ipynb
+  sections:
+  - file: soil moisture/soil moisture_slides.ipynb
+  - file: soil moisture/soil moisture_practical.ipynb
+
+
+- file: topography/topography_intro.ipynb
+  sections:
+  - file: topography/topography_slides.ipynb
+  - file: topography/topography_practical.ipynb
+ 
+
+- file: synthesis assignment/synthesis assignment_intro.ipynb
+ 
+
+
+
