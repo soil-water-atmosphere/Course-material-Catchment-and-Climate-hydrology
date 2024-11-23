@@ -33,7 +33,7 @@ jobs:
           python-version: "3.10"
 
       - name: Setup virtual environment
-        uses: syphar/restore-virtualenv@v3
+        uses: syphar/restore-virtualenv@v1
         with:
           requirement_files: requirements.txt
 
