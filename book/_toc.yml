@@ -1,5 +1,5 @@
 format: jb-book
-root: intro
+root: intro.ipynb
 options:
   numbered: 4
 chapters:    # (need to edit these according to plan)
