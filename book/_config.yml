@@ -4,6 +4,8 @@ author: Wageningen
 #logo: images/TUDelft_logo_rgb.png
 #copyright: Delft University of Technology
 
+html:
+  baseurl: /
 
 # Execute notebooks when building
 execute:

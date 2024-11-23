@@ -17,37 +17,21 @@ defaults:
     shell: bash
 
 jobs:
-  build-book:
+  build:
     runs-on: ubuntu-latest
-
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v2
-        with:
-          ref: main
-
-      - name: Setup Python
-        uses: actions/setup-python@v1
-        with:
-          python-version: "3.10"
-
-      - name: Setup virtual environment
-        uses: syphar/restore-virtualenv@v1
-        with:
-          requirement_files: requirements.txt
-
-      - name: Setup pip cache
-        uses: syphar/restore-pip-download-cache@v1
-        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
-      
-      - name: Install dependencies
-        run: pip install -r requirements.txt
-        if: steps.cache-virtualenv.outputs.cache-hit != 'true'
-
-      - name: Build book
-        run: jupyter book build book/
-
-      - name: Deploy book
-        uses: JamesIves/github-pages-deploy-action@v4
-        with:
-          folder: book/_build/html/
+    - uses: actions/checkout@v3
+    - uses: actions/setup-python@v3
+      with:
+        python-version: '3.9'
+    - name: Install dependencies
+      run: pip install jupyter-book
+    - name: Build Jupyter Book
+      run: jupyter-book build .
+    - name: Disable Jekyll
+      run: touch _build/html/.nojekyll
+    - name: Deploy to GitHub Pages
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./_build/html
