@@ -5,7 +5,7 @@ author: Wageningen
 #copyright: Delft University of Technology
 
 html:
-  baseurl: /
+  baseurl: "/Course-material-Catchment-and-Climate-hydrology"
 
 # Execute notebooks when building
 execute:
