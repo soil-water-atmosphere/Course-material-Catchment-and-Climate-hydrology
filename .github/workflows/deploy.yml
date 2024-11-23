@@ -48,8 +48,6 @@ jobs:
       - name: Build book
         run: jupyter book build book/
 
-      - name: Disable Jekyll
-        run: touch _build/html/.nojekyll
 
 
       - name: Deploy book
