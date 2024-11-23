@@ -38,7 +38,7 @@ jobs:
           requirement_files: requirements.txt
 
       - name: Setup pip cache
-        uses: syphar/restore-pip-download-cache@v3
+        uses: syphar/restore-pip-download-cache@v2
         if: steps.cache-virtualenv.outputs.cache-hit != 'true'
       
       - name: Install dependencies
