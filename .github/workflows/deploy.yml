@@ -32,6 +32,9 @@ jobs:
     - name: Add .nojekyll
       run: touch book/_build/html/.nojekyll
 
+    - name: Verify deployment files
+      run: ls -R book/_build/html
+
     - name: Deploy book
       uses: JamesIves/github-pages-deploy-action@v4
       with:
