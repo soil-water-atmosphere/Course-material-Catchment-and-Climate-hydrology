@@ -25,7 +25,7 @@ sphinx:
     - sphinx_exercise
     - sphinx_copybutton
   html_static_path:
-    - lec_slides
+    - .\lec_slides\
   config:
     bibtex_reference_style: author_year_round
     bibtex_default_style: myapastyle
