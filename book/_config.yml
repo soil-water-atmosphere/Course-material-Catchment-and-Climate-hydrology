@@ -16,7 +16,9 @@ html:
   comments:
     hypothesis: true
 # END DRAFT
-  
+html_static_path:
+    - lec_slides
+    
 sphinx:
   local_extensions:
     apastyle: _ext/
@@ -24,8 +26,7 @@ sphinx:
   extra_extensions:
     - sphinx_exercise
     - sphinx_copybutton
-  html_static_path:
-    - .\lec_slides\
+  
   config:
     bibtex_reference_style: author_year_round
     bibtex_default_style: myapastyle
