@@ -29,14 +29,17 @@ jobs:
     - name: Build book
       run: jupyter-book build book/
 
-    - name: Add .nojekyll
-      run: touch book/_build/html/.nojekyll
+    - name: Ensure lec_slides is included
+      run: |
+        if [ -d "book/lec_slides" ]; then
+          cp -r book/lec_slides book/_build/html/lec_slides;
+        fi
 
     - name: Verify deployment files
-      run: ls -R book/_build/html
+      run: ls -R book/_build/html/
 
-    - name: Verify lec_slides deployment
-      run: ls -R book/_build/html/lec_slides || echo "lec_slides folder is missing"
+    - name: Add .nojekyll
+      run: touch book/_build/html/.nojekyll
 
     - name: Deploy book
       uses: JamesIves/github-pages-deploy-action@v4
