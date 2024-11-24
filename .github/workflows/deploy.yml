@@ -35,6 +35,9 @@ jobs:
     - name: Verify deployment files
       run: ls -R book/_build/html
 
+    - name: Verify lec_slides deployment
+      run: ls -R book/_build/html/lec_slides || echo "lec_slides folder is missing"
+
     - name: Deploy book
       uses: JamesIves/github-pages-deploy-action@v4
       with:
