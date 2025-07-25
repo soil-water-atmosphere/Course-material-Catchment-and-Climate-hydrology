@@ -1,11 +1,10 @@
 # General settings
-title: Course material Catchment and Climate hydrology
+title: Catchment and Climate Hydrology
 author: Wageningen
-#logo: images/TUDelft_logo_rgb.png
-#copyright: Delft University of Technology
+logo: images/swa-logo.png
 
 html:
-  baseurl: "/Course-material-Catchment-and-Climate-hydrology"
+  baseurl: "/Catchment-and-Climate-Hydrology"
 
 # Execute notebooks when building
 execute:
