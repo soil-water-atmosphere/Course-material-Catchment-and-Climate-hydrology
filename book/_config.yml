@@ -5,16 +5,15 @@ logo: images/swa-logo.png
 
 html:
   baseurl: "/Catchment-and-Climate-Hydrology"
+# START DRAFT
+  comments:
+    hypothesis: true
+# END DRAFT
 
 # Execute notebooks when building
 execute:
   execute_notebooks: auto
 
-# START DRAFT
-html:
-  comments:
-    hypothesis: true
-# END DRAFT
 html_static_path:
     - lec_slides
     
